@@ -1,5 +1,5 @@
-SELECT COUNT(*) AS total_assistances, teachers.name
+SELECT count(assistance_requests.*) AS total_assistances, teachers.name
 FROM assistance_requests
 JOIN teachers ON teachers.id = teacher_id
-WHERE teachers.name = 'Waylon Boehm'
+WHERE name = 'Waylon Boehm'
 GROUP BY teachers.name;
